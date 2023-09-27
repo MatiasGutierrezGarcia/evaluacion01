@@ -1,0 +1,47 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+
+    
+def index(request):
+    data = {
+        "nombre" : "Matías",
+        "apellido" : "Gutiérrez",
+        "profesion" : "Estudiante",
+        "edad" : "26 años",
+        "ciudad" : "Talca"
+    }
+    return render(request,'eva01/index.html',data)
+
+def proyecto1(request):
+    data = {
+        'nombreProyecto':'Cliniva veterinara VetTalca',
+        'detalle':'Creacion de una pagina web para una clinica veterinaria.',
+        'cliente':'VetTalca',
+        'año':'2021',
+        'img':'data:image/jpeg;base64,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',
+        'link':'https://www.cvmvet.cl/?gclid=Cj0KCQjwpc-oBhCGARIsAH6ote9bgxdL5K5DjBQSAMxBa6E7tbYGEXTz7Pp34IDDOs_eApc_OHyGqrsaAsRjEALw_wcB'
+    }
+    return render(request,'eva01/template.html',data)
+
+def proyecto2(request):
+    data = {
+        'nombreProyecto':'Banco de Chile.',
+        'detalle':'Se monta la pagina web para el Banco de Chile.',
+        'cliente':'Quiñenco',
+        'año':'2004',
+        'img':'https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/SEEOYOJLYJHV5CP4XAC34FOVMI.jpg',
+        'link':'https://portales.bancochile.cl/personas/beneficios/?categoria=marcas&gclid=Cj0KCQjwpc-oBhCGARIsAH6ote_H3HzzYmMgIBLFB9e8IIL55MeXYvWOF4ksdVi8cN1edIRed8s-ensaAhYGEALw_wcB'
+    }
+    return render(request,'eva01/template.html',data)
+def proyecto3(request):
+    data = {
+        'nombreProyecto':'EMOL',
+        'detalle':'Se crea la pagina para la edicion online de El Mercurio',
+        'cliente':'Agustin Edwards Eastman',
+        'año':'2009',
+        'img':'https://mundografico.emol.cl/2011/03/11/17625_991953.jpg',
+        'link':'https://www.emol.com'
+    }
+    return render(request,'eva01/template.html',data)
